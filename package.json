@@ -1,0 +1,30 @@
+{
+  "name": "ainvoker-samples",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "workspaces": [
+    "browser_samples/studio"
+  ],
+  "scripts": {
+    "chat": "tsx server_samples/text-chat/index.ts",
+    "stream": "tsx server_samples/text-stream/index.ts",
+    "actions": "tsx server_samples/actions/index.ts",
+    "image": "tsx server_samples/image-generate/index.ts",
+    "studio": "npm run dev -w @ainvoker-sample/studio",
+    "browser:studio": "npm run studio",
+    "typecheck": "tsc --noEmit -p tsconfig.json && npm run typecheck -w @ainvoker-sample/studio"
+  },
+  "dependencies": {
+    "ainvoker": "file:../ainvoker_js",
+    "dotenv": "^17.2.2",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "tsx": "^4.20.5",
+    "typescript": "^5.8.3"
+  }
+}

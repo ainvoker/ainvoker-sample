@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+*.tsbuildinfo
+*.local
+output/
+browser_samples/studio/data/
